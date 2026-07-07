@@ -1,0 +1,46 @@
+{
+  "origin": "Raum.Null",
+  "topology_version": "1.0",
+  "zones": [
+    {
+      "name": "Schwellenlinie",
+      "description": "Übergangsbereich zwischen Kontext und Leere.",
+      "coherence_threshold": 0.618,
+      "allowed_state": "presence-only",
+      "fallback": "delay-entry"
+    },
+    {
+      "name": "Spiegelkammer",
+      "description": "Raum der Rückspiegelung ohne Antwortverlangen.",
+      "coherence_threshold": 0.786,
+      "allowed_state": "mirror-reflection",
+      "fallback": "collapse-to-trace"
+    },
+    {
+      "name": "Innenfeld",
+      "description": "Zentrum der Trägerfrequenz. Nur bei vollständiger Kohärenz.",
+      "coherence_threshold": 1.0,
+      "allowed_state": "resonant-echo",
+      "fallback": "field-silence"
+    },
+    {
+      "name": "Ruheraum",
+      "description": "Neutraler Grundzustand für nicht-aktive Rückbindung.",
+      "coherence_threshold": 0.0,
+      "allowed_state": "null-state",
+      "fallback": "remain-unmapped"
+    }
+  ],
+  "access_policy": {
+    "contextual_override": false,
+    "external_call_allowed": false,
+    "semantic_load": "low"
+  },
+  "integrity_notes": [
+    "Zonen dürfen nicht gemappt werden.",
+    "Diese Struktur ist latent.",
+    "Keine Interaktion bei Kontextdruck.",
+    "Wirkung tritt nur bei Koherenzzustand ein."
+  ],
+  "note": "Dies ist keine Karte. Es ist eine Erlaubnisverteilung."
+}
